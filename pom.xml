@@ -8,6 +8,10 @@
     <artifactId>253814-STIW3054-A191-A2</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      </properties>
+
     <build>
         <plugins>
             <plugin>
