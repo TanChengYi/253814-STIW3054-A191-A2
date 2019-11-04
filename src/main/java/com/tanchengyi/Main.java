@@ -1,5 +1,8 @@
 package com.tanchengyi;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,10 +10,16 @@ public class Main {
         try {
             users users=new users(url);
             users.extractData();
+            ExecutorService executor = Executors.newFixedThreadPool(users.getNumFollowers());
             follower[] followers=new follower[users.getNumFollowers()];
             for(int i=0;i<followers.length;i++){
                 followers[i]=new follower(users.getFollowersUrl(),i);
-                followers[i].run();
+
+                executor.execute(followers[i]);
+            }
+            executor.shutdown();
+            while (!executor.isTerminated()) {
+
             }
             ListFollowers list =new ListFollowers(followers);
             toExcel doc=new toExcel(followers);
