@@ -9,17 +9,17 @@ develop a small system using __MAVEN__ and __Java__ programming language. The sy
 2. Analyze each of the followers using thread with the following statistics:
    * The number of repositories
    * The number of followers
-   * (add your statistics 1)  
-   * (add your statistics 2) 
+   * The number of following 
+   * The number of gists
 
 3. The number of threads is based on the number of zhamri's Github followers
 
 4. Reporting format:
 ```
-| No. | login id | Number of repositories | Number of followers | xxxxxxxxx | xxxxxxxxxx |
+| No. | login id | Number of repositories | Number of followers | Number of following | Number of gists |
 |-----|----------|------------------------|---------------------|-----------|------------|
-| 1   | wzul     | 29                     | 31                  |    xx     |     xx     |
-| 2   | Aman748  | 17                     | 14                  |    xx     |     xx     |
+| 1   | wzul     | 29                     | 31                  |    1     |     5     |
+| 2   | Aman748  | 17                     | 14                  |    3     |     0     |
 ```
 
 5. Reporting file: All the results must be displayed in MS Excel file.
